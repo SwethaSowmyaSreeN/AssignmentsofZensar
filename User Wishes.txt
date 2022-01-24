@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Assignment_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string name;
+            Console.WriteLine("Enter name:");
+            name = Console.ReadLine();
+            Console.WriteLine("Hi! {0}",name);
+            Console.WriteLine( "Welcome to the world of C#");
+            Console.ReadLine();
+        }
+    }
+}

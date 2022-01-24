@@ -1,0 +1,61 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Assignment_1
+{
+    class StudentArray
+    {
+        static void Main()
+        {
+            int Total = 0, avg, min, max;
+            Console.WriteLine("Enter marks:");
+            int[] arr = new int[10];
+            for (int i = 0; i < 10; i++)
+            {
+                arr[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            for (int i = 0; i < 10; i++)
+            {
+                Total += arr[i];
+            }
+            avg = Total / 10;
+            Console.WriteLine("Total:{0}", Total);
+            Console.WriteLine("avg:{0}", avg);
+            max = arr[0];
+            min = arr[0];
+            for (int i = 0; i < 10; i++)
+            {
+                if (arr[i] > max)
+                {
+                    max = arr[i];
+                }
+                if (arr[i] < min)
+                {
+                    min = arr[i];
+                }
+
+            }
+            Console.WriteLine("Max:{0}", max);
+            Console.WriteLine("Min:{0}", min);
+            Console.WriteLine("Array in asc order:");
+            Array.Sort(arr);
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(arr[i]);
+            }
+            
+            Console.WriteLine("Array in Des order:");
+            Array.Reverse(arr);
+            for(int i= 0;i<10;i++)
+            {
+                Console.WriteLine(arr[i]);
+            }
+            Console.ReadLine();
+           
+        }
+    }
+}
