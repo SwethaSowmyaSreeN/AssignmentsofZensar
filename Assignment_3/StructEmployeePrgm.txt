@@ -1,0 +1,76 @@
+﻿5. Write a program in C# Sharp to create a nested structure to store two data for an employee in an array. 
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SixthProject
+{
+    struct Employee_1
+    {
+        public string EmpName;
+        public Employee_2 e;
+    }
+    struct Employee_2
+    {
+        public int day;
+        public int month;
+        public int year;
+        
+    }
+    class StructEmployee
+    {
+        static void Main()
+        {
+            Employee_1[] emp = new Employee_1[2];
+            for (int i = 0; i < 2; i++)
+            {
+                Console.WriteLine("Name of the Employee:");
+                emp[i].EmpName = Console.ReadLine();
+                Console.WriteLine("Day of Birth: ");
+                emp[i].e.day = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Month of Birth: ");
+                emp[i].e.month = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Year of Birth: ");
+                emp[i].e.year = Convert.ToInt32(Console.ReadLine());
+            }
+            for (int i = 0; i < 2; i++)
+            {
+                Console.WriteLine("Name of the Employee:{0}\nDay of Birth: {1}\nMonth of the Birth: {2}\nYear of the birth: {3}\n",emp[i].EmpName,emp[i].e.day,emp[i].e.month,emp[i].e.year);
+                //Console.WriteLine("");
+            }
+            Console.Read();
+
+        }
+    }
+}
+=================================================================================
+Output:
+Name of the Employee:
+Swetha
+Day of Birth:
+8
+Month of Birth:
+9
+Year of Birth:
+1998
+Name of the Employee:
+Raji
+Day of Birth:
+21
+Month of Birth:
+8
+Year of Birth:
+1999
+Name of the Employee:Swetha
+Day of Birth: 8
+Month of the Birth: 9
+Year of the birth: 1998
+
+Name of the Employee:Raji
+Day of Birth: 21
+Month of the Birth: 8
+Year of the birth: 1999
+

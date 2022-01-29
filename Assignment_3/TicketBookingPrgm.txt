@@ -1,0 +1,80 @@
+﻿Ques:1. Create a console application to book train tickets. Create a Passanger class with (Name, Age) and write a function called TicketBooking(no_of_tickets) that takes no.of tickets to be booked. If the no of tickets is > 5 per booking, raise an user defined exception, and print "cannot book more than 5 tickets". Else Print  "Ticket Booked Successfully". Add a Test class to call TicketBooking method by accepting all required details.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SixthProject
+{
+    class TicketBookingException:ApplicationException
+    {
+        public TicketBookingException(string msg):base(msg)
+        {
+
+        }
+
+    }
+    class Passanger
+    {
+        public string Name;
+        public int Age;
+        public int tickets;
+        public void TicketBooking(int no_of_tickets)
+        {
+            if(no_of_tickets>5)
+            {
+               throw(new TicketBookingException("Cannot book more than 5 tickets"));
+
+            }
+            else
+            {
+                Console.WriteLine("Ticked Booked Successfully");
+            }
+
+        }
+    }
+    class Test:Passanger
+    {
+        public void test()
+        {
+            
+            Console.WriteLine("Enter Passenger Name:");
+            Name = Console.ReadLine();
+            Console.WriteLine("Enter Passenger Age:");
+            Age = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter no.of tickets to book:");
+            tickets = Convert.ToInt32(Console.ReadLine());
+            TicketBooking(tickets);
+        }
+
+    }
+    class ExceptionHandling
+    {
+        static void Main()
+        {
+            Test t = new Test();
+            try
+            {
+                t.test();
+            }
+            catch(TicketBookingException tb)
+            {
+                Console.WriteLine(tb.Message);
+
+            }
+            Console.Read();
+
+        }
+    }
+}
+====================================================================
+Output:
+Enter Passenger Name:
+Swetha
+Enter Passenger Age:
+23
+Enter no.of tickets to book:
+6
+Cannot book more than 5 tickets
+

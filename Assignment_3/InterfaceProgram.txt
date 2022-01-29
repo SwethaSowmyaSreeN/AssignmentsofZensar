@@ -1,0 +1,61 @@
+﻿3.Create an Interface IStudent with StudentId and Name as Properties, ShowDetails() as its method. Create 2 classes Dayscholar and Resident that implements the interface Properties and Methods. Test The functionalities.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SixthProject
+{
+    interface Istudent
+    {
+        
+        void ShowDetails(string Name,int Id);
+    }
+    class Dayscholar : Istudent
+    {
+
+        
+        public void ShowDetails(string Name,int id)
+        {
+            Console.WriteLine("DayScholars Name: " + Name);
+            Console.WriteLine("DayScholars ID: " + id);
+
+        }
+    }
+        class Resident : Istudent
+        {
+        
+        //Accessing Interface Values for properties instead of declaration
+        
+            public void ShowDetails(string Name,int ID)
+            {
+           
+                Console.WriteLine("Name of the Resident Student: " + Name);
+                Console.WriteLine("Resident Student ID: " + ID);
+
+            }
+
+        }
+        class InterfaceExample
+        {
+        static void Main()
+        {
+            Istudent stud = new Dayscholar();
+            Console.WriteLine("Dayscholar Details:"); 
+            stud.ShowDetails("Hari",102);
+            Istudent student = new Resident();
+            Console.WriteLine("Resident Details:");
+            student.ShowDetails("Ramesh",854);
+            Console.ReadLine();
+        }
+        }
+}
+================================================================================
+Output:
+Dayscholar Details:
+DayScholars Name: Hari
+DayScholars ID: 102
+Resident Details:
+Name of the Resident Student: Ramesh
+Resident Student ID: 854

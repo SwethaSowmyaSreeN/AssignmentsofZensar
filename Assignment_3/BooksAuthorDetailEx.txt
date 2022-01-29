@@ -1,0 +1,63 @@
+﻿6. Write a program in C# Sharp to insert the information of two books. 
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace SixthProject
+{
+    class BooksDetail
+    {
+        struct Authors
+        {
+            public string Title;
+            public string Author;
+        }
+        
+        static void Main()
+        {
+            
+            Authors[] auth = new Authors[2];
+            Console.WriteLine("Insert the information of two books");
+            for (int i = 0; i < 2; i++)
+            {
+                Console.WriteLine("Information of Book{0}", i + 1);
+                Console.WriteLine("Name of the book: ");
+                auth[i].Title = Console.ReadLine();
+                Console.WriteLine("Author of the book: ");
+                auth[i].Author = Console.ReadLine();
+                Console.ReadLine();
+
+            }
+            for (int i = 0; i < 2; i++)
+            {
+                Console.WriteLine("Title = {0},\tAuthor = {1}\n",auth[i].Title,auth[i].Author);
+            }
+            Console.Read();
+            
+
+        }
+    }
+}
+==================================================================================
+Output:
+Insert the information of two books
+Information of Book1
+Name of the book:
+BASIC
+Author of the book:
+S.TROELSTRA
+
+Information of Book2
+Name of the book:
+C++
+Author of the book:
+G.RTRTG
+
+Title = BASIC,  Author = S.TROELSTRA
+
+Title = C++,    Author = G.RTRTG
+

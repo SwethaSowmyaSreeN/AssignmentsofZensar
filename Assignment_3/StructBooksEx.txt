@@ -1,0 +1,42 @@
+﻿4. Write a program in C# Sharp to declare a structure called Books with a property, a method to display the value of Book_id, and a private field called Book_id (int)
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SixthProject
+{
+    struct Books
+    {
+        public string Book_Name;
+        private int Book_ID { get; set; }
+        
+       
+        public int book_ID
+        {
+            get { return Book_ID; }
+            set { Book_ID = value; }
+
+        }
+        public void Display()
+        {
+            Console.WriteLine("Book Name:{0}\nBookID:{1}",Book_Name,Book_ID);
+        }
+    }
+    class StructBook
+    {
+        public static void Main()
+        {
+            Books b=new Books();
+            b.Book_Name = "Fear Not.....Be Strong";
+            b.book_ID= 1452;
+            b.Display();
+            Console.Read();
+        }
+    }
+}
+================================================================================
+Output:
+Book Name:Fear Not.....Be Strong
+BookID:1452
