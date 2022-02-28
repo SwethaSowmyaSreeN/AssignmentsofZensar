@@ -1,0 +1,108 @@
+<!--1.Write a JavaScript program to calculate multiplication and division of two numbers (input from user).-->
+
+
+<!DOCTYPE html>
+<head>
+<h4>JavaScript Multiplication and division of two numbers Program</h4>
+<style type="css">
+body {margin: 30px;}
+</style>
+</head>
+<body>
+    <script>
+        function mul()
+        {
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+        document.getElementById("result").innerHTML = num1 * num2;
+        }
+
+        function div() 
+        { 
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+        document.getElementById("result").innerHTML = num1 / num2;
+        }
+    </script>
+<form>
+First Number  : <input type="text" id="firstNumber"/><br/><br/>
+Second Number : <input type="text" id="secondNumber"/><br/><br/>
+<input type="button" onClick="mul()" Value="Multiply" />
+<input type="button" onClick="div()" Value="Divide" />
+<p>The Result is : <br>
+<div id = "result"></div>
+</p>
+</form>
+</body>
+
+<!--2.Write a JavaScript to get the extension of a filename given by the user(hint: use split and pop())-->
+
+
+<!DOCTYPE html>
+<head>
+  <h3><b>To get extension of a filename program.</b></h3>
+</head>
+<body>
+<script>
+    filename = "Chocolate.jpg"
+    document.writeln(filename.split('.').pop());
+    filename = "Zensar.html"
+    document.writeln(filename.split('.').pop()); 
+</script>
+</body>
+</html>
+
+
+<!--3.Write a JavaScript program to compute the sum of the given two integers. If the two values are same, then returns triple their sum.-->
+
+
+<!DOCTYPE html>
+<head>
+<h4>JavaScript program to get triple sum when both numbers are same.</h4>
+</head>
+<body>
+    <script>
+        function sumTriple (n1, n2) {
+            if (n1 == n2)
+            {
+                return 3 * (n1 + n2);
+            } 
+            else
+            {
+              return (n1 + n2);
+            }
+        }
+document.writeln(sumTriple(12,12));
+document.writeln(sumTriple(10,12));
+</script>
+</body>
+</html>
+
+
+<!--4.Write a JavaScript program to check whether two given integer values are in the range 50..99 (inclusive). Return true if both of them are in the said range, else false.-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <h4>JavaScript program to check two integer values are in between 50 to 99</h4>
+</head>
+<body>
+    <script>
+        function check_num(x, y) 
+        {
+            if ((x >= 50 && x <= 99) || (y >= 50 && y <= 99))
+            {
+              return true;
+            } 
+            else 
+            {
+                return false;
+            }
+        }
+document.writeln(check_num(8,108));
+document.writeln(check_num(56, 90));
+document.writeln(check_num(61, 99));
+</script>    
+</body>
+</html>
