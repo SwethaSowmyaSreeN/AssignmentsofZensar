@@ -1,0 +1,27 @@
+create database CaseStudyDB
+use CaseStudyDB
+--Creation of Student table
+create table Student(
+S_ID int primary key,
+S_Name Varchar(20),
+S_Dob Varchar(10))
+
+select *from Student
+--Creation of Course table
+create table Course
+(C_Id int primary key,
+C_Name Varchar(10),
+C_Dur Varchar(10),
+Fees int)
+
+select *from Course
+--Creation of Enroll table
+create table Enroll
+(cid int foreign key references Course(C_Id),
+S_id int primary key,
+EnrollDate date)
+
+select *from Enroll
+
+
+select *from Student
