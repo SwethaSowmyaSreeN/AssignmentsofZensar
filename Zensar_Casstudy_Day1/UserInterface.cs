@@ -72,7 +72,7 @@ namespace Zensar_Casstudy_Day1
 						Console.WriteLine("--------------------List of Courses------------------------");
 						ae.Available_Courses();
 						Console.WriteLine("Action Completed you may Exit....!");
-						break;
+						break; 
 					case 5:
 						//Student enrolling to particular course
 						ae.enrolling_Course();
