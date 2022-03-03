@@ -22,6 +22,6 @@ S_id int primary key,
 EnrollDate date)
 
 select *from Enroll
-
+select * from Course
 
 select *from Student
