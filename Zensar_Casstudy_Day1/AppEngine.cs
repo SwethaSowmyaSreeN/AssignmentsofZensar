@@ -277,14 +277,14 @@ namespace Zensar_Casstudy_Day1
                     int res7 = cmd.ExecuteNonQuery();
                     if (res7 > 0)
                     {
-                        Console.WriteLine("Course deleted Sucessfully");
+                        Console.WriteLine("Student deleted Sucessfully");
                     }
                     else
-                        Console.WriteLine("Please enter valid Course Id to delete");
+                        Console.WriteLine("Please enter valid Student Id to delete");
                 }
                 else
                 {
-                    Console.WriteLine("You are not supposed to delete the course please try again...!");
+                    Console.WriteLine("You are not supposed to delete the Student please try again...!");
                 }
             }
             catch(SqlException se)
