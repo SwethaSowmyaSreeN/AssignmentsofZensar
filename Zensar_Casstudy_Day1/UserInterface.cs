@@ -48,7 +48,7 @@ namespace Zensar_Casstudy_Day1
 			do
 			{ 
 			    AppEngine ae = new AppEngine();
-			    Console.WriteLine("Select: \n1.Check your Details(Existing User)\n2.Registration(New User)\n3.Update Your Details\n4.Search Available Courses\n5.Enroll to Course in List");
+			    Console.WriteLine("Select: \n1.Check your Details(Existing User)\n2.Registration(New User)\n3.Search Available Courses\n4.Enroll to Course in List");
 			    int op = Convert.ToInt32(Console.ReadLine());
 
 				switch (op)
@@ -63,17 +63,13 @@ namespace Zensar_Casstudy_Day1
 						Console.WriteLine("Action Completed you may Exit....!");
 						break;
 					case 3:
-						//updating Student details that are done by mistake by the student during registration
-						ae.Changes_inStudDetails();
-						Console.WriteLine("Action Completed you may Exit....!");
-						break;
-					case 4:
-						//Showcase all available courses that student have an idea to enroll with particular CourseID during enrollment
+					        //Showcase all available courses that student have an idea to enroll with particular CourseID during enrollment
 						Console.WriteLine("--------------------List of Courses------------------------");
 						ae.Available_Courses();
 						Console.WriteLine("Action Completed you may Exit....!");
 						break; 
-					case 5:
+						
+					case 4:
 						//Student enrolling to particular course
 						ae.enrolling_Course();
 						Console.WriteLine("You have successfully enrolled you may Exit the Screen now");
