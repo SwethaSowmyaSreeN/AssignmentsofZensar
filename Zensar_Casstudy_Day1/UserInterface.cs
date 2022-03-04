@@ -63,12 +63,12 @@ namespace Zensar_Casstudy_Day1
 						Console.WriteLine("Action Completed you may Exit....!");
 						break;
 					case 3:
-						//updating Student details
+						//updating Student details that are done by mistake by the student during registration
 						ae.Changes_inStudDetails();
 						Console.WriteLine("Action Completed you may Exit....!");
 						break;
 					case 4:
-						//Showcase all available courses
+						//Showcase all available courses that student have an idea to enroll with particular CourseID during enrollment
 						Console.WriteLine("--------------------List of Courses------------------------");
 						ae.Available_Courses();
 						Console.WriteLine("Action Completed you may Exit....!");
@@ -88,10 +88,10 @@ namespace Zensar_Casstudy_Day1
 
 			}
 			while ((option == "Y") || (option == "y"));  
-        }
+                 }
 		public override void showAdminScreen()
-        {
-            do 
+                {
+                      do 
 			{ 
 			    AppEngine aE = new AppEngine();
 			    Console.WriteLine("Select: \n1.Introduce New Course\n2.Courses Available\n3.Update Course Details\n4.Retrieve Particular Course in List\n5.Deleting Existing Student\n6.Delete Course\n7.Update Student Details\n8.AllRegistered Students");
@@ -146,34 +146,34 @@ namespace Zensar_Casstudy_Day1
 				}
 				Console.WriteLine("Do you want to Continue in Admin Screen Y or N");
 				option = Console.ReadLine();
-			}
-			while ((option == "Y") || (option == "y"));
-		}
+			  }
+			  while ((option == "Y") || (option == "y"));
+		   }
 		public override void showAllStudentsScreen()
-        {
-			AppEngine Ae = new AppEngine();
-			Ae.Show_all_registered_Students();
-            Console.WriteLine("Action Completed you may Exit....!");
-        }
+                {
+		      //Navigates to pool of students in Database
+		       AppEngine Ae = new AppEngine();
+		       Ae.Show_all_registered_Students();
+                       Console.WriteLine("Action Completed you may Exit....!");
+                }
 		public override void showStudentRegistrationScreen()
 		{
+		        //navigates to registration block
 			AppEngine A = new AppEngine();
-			A.New_StudentRegistration();
-			
-
+			A.New_StudentRegistration();	
 		}
 		public override void introduceNewCourseScreen()
-        {
+               {
+	               // Navigates to registering new courses to academy
 			AppEngine AE = new AppEngine();
 			AE.Introducing_NewCourse();
 			
 		}
 		public override void showAllCoursesScreen()
-        {
+                {
+		        //Navigates to pool of Courses in Database
 			AppEngine ape = new AppEngine();
 			ape.Available_Courses();
-			
-
 		}
 	}
 }
