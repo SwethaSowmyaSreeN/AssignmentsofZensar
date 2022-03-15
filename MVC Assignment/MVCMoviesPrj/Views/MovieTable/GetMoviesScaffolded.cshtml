@@ -5,12 +5,19 @@
 }
 
 <h2>GetMoviesScaffolded</h2>
-
+<p>
+    @using (Html.BeginForm("GetMovieName", "MovieTable", FormMethod.Get))
+    {
+<text><b>Search Movies By Year</b></text> @Html.TextBox("val")<input type="submit" value="val" />}
+</p>
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MovieID)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.MovieName)
         </th>
@@ -22,6 +29,9 @@
 
 @foreach (var item in Model) {
     <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MovieID)
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.MovieName)
         </td>
