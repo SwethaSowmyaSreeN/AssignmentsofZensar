@@ -59,5 +59,12 @@ namespace MVCMoviesPrj.Controllers
             me.SaveChanges();
             return RedirectToAction("GetMoviesScaffolded");
         }
+        public ActionResult GetMovieName(string val)
+        {
+            List<MovieTable> res = (from s in me.MovieTables
+                                    where s.MovieReleaseDate.ToString().Contains(val) || val == null
+                                    select s).ToList();
+            return View(res);
+        }
     }
 }
