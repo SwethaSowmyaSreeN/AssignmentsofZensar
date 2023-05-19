@@ -1,0 +1,149 @@
+Delegate is a reference to the method.The best use of delegate is to use as event.
+
+
+Call by Value - type parameters are that pass a copy of original value to the function rather than reference. It does not modify the original value. A change made in passed value does not alter the actual value.
+
+Call by reference - C# provides a ref keyword to pass argument as reference-type. It passes reference of arguments to the function rather than copy of original value. The changes in passed values are permanent and modify the original variable value.
+
+Out - C# provides out keyword to pass arguments as out-type. It is like reference-type, except that it does not require variable to initialize before passing. We must use out keyword to pass argument as out-type. It is useful when we want a function to return multiple values.
+
+Params is a keyword which is used to specify a parameter that takes variable number of arguments. It is useful when we don't know the number of arguments prior.
+
+Arguments that are passed by command line known as command line arguments. We can send arguments to the Main method while executing the code. The string args variable contains all the values passed from the command line. 
+
+Object is an instance of a class.
+Class is a group of similar objects. It is a template from which objects are created. It can have fields, methods, constructors etc.
+
+Constructor is a special method which is invoked automatically at the time of object creation. It is used to initialize the data members of new object generally. The constructor in C# has the same name as class or struct.
+
+A Destructor works opposite to constructor, It destructs the objects of classes. It can be defined only once in a class.
+destructor cannot have parameters amd modifiers.
+
+Static is a keyword or modifier that belongs to the type not instance. So instance is not required to access the static members. In C#, static can be field, method, constructor, class, properties, operator and event. Indexers and destructors cannot be static.
+
+Static class is like the normal class but it cannot be instantiated. It can have only static members.
+
+Static constructor is used to initialize static fields. It can also be used to perform any action that is to be performed only once. 
+
+Classes and Structs are blueprints that are used to create instance of a class. Structs are used for lightweight objects such as Color, Rectangle, Point etc.
+Struct doesn't support inheritance. But it can implement interfaces.
+Unlike class, structs in C# are value type than reference type. It is useful if you have data that is not intended to be modified after creation of struct.
+
+Enum in C# is also known as enumeration. It is used to store a set of named constants such as season, days, month, size etc.
+
+C# Properites are extension of fields and accessed like fields.
+
+Inheritance is a process in which one object acquires all the properties and behaviors of its parent object automatically.
+Multiple inheritance is not supported in C# through class.
+
+If we create two or more members having same name but different in number or type of parameter, it is known as Member overloading.
+
+If derived class defines same method as defined in its base class, it is known as Method overriding in C#. It is used to achieve runtime polymorphism.you need to use virtual keyword with base class method and override keyword with derived class method.
+
+There are two types of polymorphism in C#: compile time polymorphism and runtime polymorphism. Compile time polymorphism is achieved by method overloading and operator overloading in C#. It is also known as static binding or early binding. Runtime polymorphism in achieved by method overriding which is also known as dynamic binding or late binding.
+
+Sealed keyword applies restrictions on the class and method. If you create a sealed class, it cannot be derived. If you create a sealed method, it cannot be overridden.
+Structs are implicitly sealed therefore they can't be inherited.
+
+Abstraction in C# is the process to hide the internal details and showing functionality only. Abstract class and interface both can have abstract methods which are necessary for abstraction.
+An abstract method in C# is internally a virtual method so it can be overridden by the derived class.
+
+Interface in C# is a blueprint of a class. It is like abstract class because all the methods which are declared inside the interface are abstract methods. It cannot have method body and cannot be instantiated.
+
+It is used to achieve multiple inheritance which can't be achieved by class. It is used to achieve fully abstraction because it cannot have method body.
+
+Its implementation must be provided by class or struct. The class or struct which implements the interface, must provide the implementation of all the methods declared inside the interface.
+Interface methods are public and abstract by default. You cannot explicitly use public and abstract keywords for an interface method.
+
+Encapsulation is the concept of wrapping data into a single unit. It collects data members and member functions into a single unit called class. The purpose of encapsulation is to prevent alteration of data from outside. A fully encapsulated class has getter and setter functions that are used to read and write data.
+
+Indexers allow instances of a class or struct to be indexed just like arrays. The indexed value can be set or retrieved without explicitly specifying a type or instance member. Indexers resemble properties except that their accessors take parameters.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL stands for Structured Query Language. It is a language used to interact with the database.
+
+Database is a collection of data in an organized manner and can be accessed in various ways. It is also the collection of schemas, tables, queries, views, etc.
+
+ DBMS is a  software application that allows a user to interact with the database. The data stored in the database can be modified, retrieved and deleted and can be of any type like strings, numbers, images, etc.
+
+A relational database management system (RDBMS) is a type of database management system (DBMS) that stores data in a row-based table structure that links related data components. 
+
+A SELECT command gets zero or more rows from one or more database tables or views. The most frequent data manipulation language (DML) command is SELECT in most applications. 
+
+WHERE clause: In SQL, the WHERE clause is used to filter records that are required depending on certain criteria.
+
+ORDER BY clause: The ORDER BY clause in SQL is used to sort data in ascending (ASC) or descending (DESC) order depending on specified field(s) (DESC).
+
+GROUP BY clause: GROUP BY clause in SQL is used to group entries with identical data and may be used with aggregation methods to obtain summarised database results.
+
+HAVING clause in SQL is used to filter records in combination with the GROUP BY clause. It is different from WHERE, since the WHERE clause cannot filter aggregated records.
+
+The BETWEEN operator is used to fetch rows based on a range of values.
+The IN operator is used to check for values contained in specific sets. 
+
+Data definition language or DDL allows to execution of queries like CREATE, DROP and ALTER. That is those queries that define the data.
+Data manipulation Language or DML is used to access or manipulate data in the database. 
+Data Control Language(DCL) – It allows you to control access to the database. Example – Grant, Revoke access permissions.
+
+Views in SQL are a kind of virtual table. A view also has rows and columns as they are on a real table in the database. We can create a view by selecting fields from one or more tables present in the database. A View can either have all the rows of a table or specific rows based on certain conditions.
+
+An SQL Join statement is used to combine data or rows from two or more tables based on a common field between them.
+
+(INNER) JOIN: Retrieves records that have matching values in both tables involved in the join. This is the widely used join for queries
+SELECT * FROM Table_A JOIN Table_B;
+SELECT * FROM Table_A INNER JOIN Table_B;
+
+LEFT (OUTER) JOIN: Retrieves all the records/rows from the left and the matched records/rows from the right table.
+SELECT * FROM Table_A A LEFT JOIN Table_B B ON A.col = B.col;
+
+RIGHT (OUTER) JOIN: Retrieves all the records/rows from the right and the matched records/rows from the left table.
+SELECT * FROM Table_A A RIGHT JOIN Table_B B ON A.col = B.col;
+
+FULL (OUTER) JOIN: Retrieves all the records where there is a match in either the left or right table.
+SELECT * FROM Table_A A FULL JOIN Table_B B ON A.col = B.col;
+
+A self JOIN is a case of regular join where a table is joined to itself based on some relation between its own column(s).
+Cross join can be defined as a cartesian product of the two tables included in the join. The table after join contains the same number of rows as in the cross-product of the number of rows in the two tables. If a WHERE clause is used in cross join then the query will work like an INNER JOIN.
+
+A database Index is a data structure that improves the speed of data retrieval operations on a database table at the cost of additional writes and the use of more storage space to maintain the extra copy of data.
+
+A table has a combination of rows and columns. Rows are called records and columns are called fields.
+
+The DEFAULT constraint is used to fill a column with default and fixed values. The value will be added to all new records when no other value is provided. 
+
+An ‘ON DELETE CASCADE’ constraint is used in MySQL to delete the rows from the child table automatically when the rows from the parent table are deleted.
+
+The cursor is a Temporary Memory or Temporary Work Station. It is Allocated by Database Server at the Time of Performing DML operations on Table by User. Cursors are used to store Database Tables. 
+
+An SQL query is used to retrieve the required data from the database.In SQL a Subquery can be simply defined as a query within another query. 
+
+Trigger is a statement that a system executes automatically when there is any modification to the database. In a trigger, we first specify when the trigger is to be executed and then the action to be performed when the trigger executes.
+
+Constraints are used to specify the rules concerning data in the table. It can be applied for single or multiple fields in an SQL table during the creation of the table or after creating using the ALTER TABLE command. The constraints are:
+NOT NULL - Restricts NULL value from being inserted into a column.
+CHECK - Verifies that all values in a field satisfy a condition.
+DEFAULT - Automatically assigns a default value if no value has been specified for the field.
+UNIQUE - Ensures unique values to be inserted into the field.
+INDEX - Indexes a field providing faster retrieval of records.
+PRIMARY KEY - Uniquely identifies each record in a table.
+FOREIGN KEY - Ensures referential integrity for a record in another table.
+
+The PRIMARY KEY constraint uniquely identifies each row in a table. It must contain UNIQUE values and has an implicit NOT NULL constraint.A table in SQL is strictly restricted to have one and only one primary key, which is comprised of single or multiple fields (columns).
+
+UNIQUE constraint ensures that all values in a column are different. This provides uniqueness for the column(s) and helps identify each row uniquely. Unlike primary key, there can be multiple unique constraints defined per table. 
+
+A FOREIGN KEY comprises of single or collection of fields in a table that essentially refers to the PRIMARY KEY in another table. Foreign key constraint ensures referential integrity in the relation between two tables.The table with the foreign key constraint is labeled as the child table, and the table containing the candidate key is labeled as the referenced or parent table.
+
+WHERE clause in SQL is used to filter records that are necessary, based on specific conditions.
+ORDER BY clause in SQL is used to sort the records based on some field(s) in ascending (ASC) or descending order (DESC).
+GROUP BY clause in SQL is used to group records with identical data and can be used in conjunction with some aggregation functions to produce summarized results from the database.
+HAVING clause in SQL is used to filter records in combination with the GROUP BY clause. It is different from WHERE, since the WHERE clause cannot filter aggregated records.
+
+The UNION operator combines and returns the result-set retrieved by two or more SELECT statements.
+The MINUS operator in SQL is used to remove duplicates from the result-set obtained by the second SELECT query from the result-set obtained by the first SELECT query and then return the filtered results from the first.
+The INTERSECT clause in SQL combines the result-set fetched by the two SELECT statements where records from one match the other and then returns this intersection of result-sets.
+
+OLTP, or online transactional processing, allows huge groups of people to execute massive amounts of database transactions in real time, usually via the internet. A database transaction occurs when data in a database is changed, inserted, deleted, or queried.
+
+OLTP stands for online transaction processing, whereas OLAP stands for online analytical processing. OLTP is an online database modification system, whereas OLAP is an online database query response system.
+
+The NVL function to replace null values with a default value. The function returns the value of the second parameter if the first parameter is null. If the first parameter is anything other than null, it is left alone.
